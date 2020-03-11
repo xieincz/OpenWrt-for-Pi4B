@@ -8,6 +8,11 @@ Build OpenWrt using GitHub Actions
 
 [Read the details in my blog (in Chinese) | 中文教程](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 
+## 一些说明
+这个.config文件(上传于20200311)编译出来的固件只适用于树莓派4B且SD卡空间需≥700MB.任何对.config文件的更改(包括创建、删除、修改)都会触发GitHub Actions.
+
+
+
 ## Usage
 
 - Click the [Use this template](https://github.com/P3TERX/Actions-OpenWrt/generate) button to create a new repository.
