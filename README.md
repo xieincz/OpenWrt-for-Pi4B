@@ -12,7 +12,7 @@ Build OpenWrt using GitHub Actions
 - 这个.config文件(上传于20200311)编译出来的固件只适用于树莓派4B且SD卡空间需≥600MB.任何对.config文件的更改(包括创建、删除、修改)都会触发GitHub Actions.
 - 发布release也可以触发GitHub Actions.
 - 关于初次刷入openwrt连接不到树莓派,可以按照这篇[博客](https://www.livejq.top/2019/%E7%94%A8Raspberry-Pi-4b%E5%AE%9E%E7%8E%B0%E8%BD%AF%E8%B7%AF%E7%94%B1.html)设置.
-
+- 目前不知道什么原因,使用网页更新总是导致π4B无法正常工作.
 
 ## Usage
 
