@@ -115,7 +115,11 @@ jobs:
 
 #  自动上传到release (来源 https://github.com/garypang13/Actions-OpenWrt-Snapshot/blob/master/.github/workflows/build-openwrt.yml )
 #  一天只会上传一个release
-        
+                
+    - name: Get current date
+      id: date
+      run: echo "::set-output name=date::$(date +'%m/%d,%Y')"
+
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v1-release
       if: steps.compile.outputs.status == 'success' && !cancelled()
