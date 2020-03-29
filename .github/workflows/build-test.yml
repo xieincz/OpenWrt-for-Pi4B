@@ -1,0 +1,42 @@
+name: test
+
+on:
+#  release:
+#    types: published
+  push:
+    branches:
+      - master
+    paths:
+      - 'test'
+#  schedule:
+#    - cron: 0 8 * * 5
+#  watch:
+#    types: started
+
+env:
+  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_BRANCH: master
+  CONFIG_FILE: .config
+  DIY_SH: diy.sh
+  SSH_ACTIONS: false
+  UPLOAD_BIN_DIR: false
+  UPLOAD_FIRMWARE: true
+  TZ: Asia/Shanghai
+  FILE_NAME: 树莓派4B_OpenWrt
+  env.DATE: 20200329
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+
+    steps:
+    - name: WeChat notification
+      run: curl https://sc.ftqq.com/${{secrets.ServerChan}}.send?text=${{ env.FILE_NAME }}开始编译
+      
+    - name: Checkout
+      uses: actions/checkout@master
+      
+    - name: WeChat notification
+#原命令的备份      run: curl https://sc.ftqq.com/${{secrets.ServerChan}}.send?text=${{ env.FILE_NAME }}编译完成
+      run: curl https://sc.ftqq.com/${{secrets.ServerChan}}.send?text=${{ env.FILE_NAME }}编译完成&desp=${{ env.DATE }}。[点击此处打开release页面](https://github.com/xieincz/OpenWrt-for-Pi4B/releases)
