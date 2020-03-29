@@ -123,4 +123,5 @@ jobs:
         artifacts: ${{ env.FIRMWARE }}/*
 
     - name: WeChat notification
-      run: curl https://sc.ftqq.com/${{secrets.ServerChan}}.send?text=${{ env.FILE_NAME }}编译完成
+#原命令的备份      run: curl https://sc.ftqq.com/${{secrets.ServerChan}}.send?text=${{ env.FILE_NAME }}编译完成
+      run: curl https://sc.ftqq.com/${{secrets.ServerChan}}.send?text=${{ env.FILE_NAME }}编译完成&desp=${{env.DATE}}当前使用版本:（编译前的最后一次源码更新记录，源码来自 https://github.com/coolsnowwolf/lede)${{ env.useVersionInfo }}
