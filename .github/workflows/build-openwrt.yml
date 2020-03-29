@@ -24,7 +24,7 @@ env:
   TZ: Asia/Shanghai
   FILE_NAME: 树莓派4B_OpenWrt
 
- jobs:
+jobs:
   build:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
