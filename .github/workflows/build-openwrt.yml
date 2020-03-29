@@ -31,7 +31,7 @@ jobs:
 
     steps:
     - name: WeChat notification
-      run: curl https://sc.ftqq.com/${{secrets.ServerChan}}.send?text=${{ env.FILE_NAME }} 开始编译
+      run: curl https://sc.ftqq.com/${{secrets.ServerChan}}.send?text=${{ env.FILE_NAME }}开始编译
       
     - name: Checkout
       uses: actions/checkout@master
@@ -123,4 +123,4 @@ jobs:
         artifacts: ${{ env.FIRMWARE }}/*
 
     - name: WeChat notification
-      run: curl https://sc.ftqq.com/${{secrets.ServerChan}}.send?text=${{ env.FILE_NAME }} 编译完成
+      run: curl https://sc.ftqq.com/${{secrets.ServerChan}}.send?text=${{ env.FILE_NAME }}编译完成
