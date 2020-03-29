@@ -14,6 +14,8 @@ Build OpenWrt using GitHub Actions
 - 文件编译完成会自动发布到release.
 - 关于初次刷入openwrt连接不到树莓派,可以按照这篇[博客](https://www.livejq.top/2019/%E7%94%A8Raspberry-Pi-4b%E5%AE%9E%E7%8E%B0%E8%BD%AF%E8%B7%AF%E7%94%B1.html)设置.
 - 目前不知道什么原因,使用网页更新总是导致π4B无法正常工作.
+- 部分方法来自 https://github.com/bin20088/Bin
+- 现在已配置微信推送
 
 ## Usage
 
