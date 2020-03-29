@@ -39,4 +39,4 @@ jobs:
       
     - name: WeChat notification
 #原命令的备份      run: curl https://sc.ftqq.com/${{secrets.ServerChan}}.send?text=${{ env.FILE_NAME }}编译完成
-      run: curl https://sc.ftqq.com/${{secrets.ServerChan}}.send?text=${{ env.FILE_NAME }}编译完成&desp=${{ env.DATE }}。[点击此处打开release页面](https://github.com/xieincz/OpenWrt-for-Pi4B/releases)
+      run: curl https://sc.ftqq.com/${{secrets.ServerChan}}.send?text=${{ env.FILE_NAME }}编译完成&desp=${{env.DATE}}。release页面为https://github.com/xieincz/OpenWrt-for-Pi4B/releases
