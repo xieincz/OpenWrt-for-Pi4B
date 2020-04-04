@@ -114,7 +114,7 @@ jobs:
       with:
         name: ${{env.DATE}} 🚀 树莓派4B_OpenWrt | 自动编译
         allowUpdates: true
-        tag: ${{env.DATE}}
+        tag: 树莓派4B_OpenWrt
         commit: master
         token: ${{ secrets.RELEASES_TOKEN }}
         body: |
