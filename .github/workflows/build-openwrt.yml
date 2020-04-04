@@ -129,7 +129,7 @@ jobs:
         # The file(s) to upload
         file: ${{ env.FIRMWARE }}/*
         # The file expiry time
-#        expiry_time: 5m # optional
+        expiry_time: 1434m # optional
         # Protect the file with a password
 #        password: ${{ secrets.FFSEND_PASSWORD }} # optional
 
@@ -137,4 +137,4 @@ jobs:
       run: echo ${{ steps.ffsend.outputs.url }} # show URL
 
     - name: WeChat notification
-      run: curl https://sc.ftqq.com/${{secrets.ServerChan}}.send?text=${{ env.FILE_NAME }}编译完成&desp=FirefoxSend的下载地址${{ steps.ffsend.outputs.url }}
+      run: curl https://sc.ftqq.com/${{secrets.ServerChan}}.send?text=${{ env.FILE_NAME }}编译完成｡&desp=FirefoxSend的下载地址${{ steps.ffsend.outputs.url }}
